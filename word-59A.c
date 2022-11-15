@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include<ctype.h>
 int main()
 {
 	char s[100];
@@ -6,7 +7,7 @@ int main()
 	scanf("%s", s);
 	
 	for (int i=0; s[i] != '\0'; i++) {
-		if (s[i] >= 'A' && s[i] <= 'Z') {
+		if (isupper(s[i])) {
 			count++;
 		}
 		else {
@@ -16,11 +17,11 @@ int main()
 
 	if (count > 0) { //uppercase
 		for (int i = 0; s[i] != '\0'; i++) {
-	
+	      toupper(s[i]);
 		}
 	} else {
-		for (int i=0; i < strlen(s); i++) {
-		
+		for (int i=0; i < s[i] != '\0'; i++) {
+		tolower(s[i]);
 		}
 	}
 
